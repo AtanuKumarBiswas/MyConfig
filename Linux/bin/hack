@@ -1,0 +1,58 @@
+#!/bin/bash
+
+PROG_NAME=$1
+if [[ ${PROG_NAME: -2} == ".c" ]]; then
+    COMPILER=gcc
+    STD="-std=c99"
+    CFLAGS="-g -Wall -Wextra -Werror -Wmissing-prototypes"
+elif [[ ${PROG_NAME: -4} == ".cpp" ]]; then
+    COMPILER=g++
+    STD="-std=c++17"
+    CFLAGS="-g -Wall -Wextra -Werror" 
+fi
+
+LINK="-lm -lcs50" 
+OUT=exe
+if test -f "$OUT"; then
+    rm $OUT
+fi
+echo "            ***$PROG_NAME is compiled***"
+$($COMPILER $STD $CFLAGS $PROG_NAME $LINK -o exe)  #redirect the error to a variable
+echo $output              #show the error on stdout
+
+if test -f "$OUT"; then
+    echo "  ****Running *exe* give input if needed!****"
+    echo "         ******INPUTS/OUTPUTS******"
+    ./$OUT
+    echo "               ********DONE********"
+fi
+if test -f "$OUT"; then
+#echo "$OUT removed!"
+    echo "                 ***EXE REMOVED***"
+    rm $OUT
+fi
+
+# if test -f "$FILE"; then
+# #    echo "$FILE removed!"
+#     rm $FILE
+# fi
+
+
+
+# gcc -std
+# Choose the c standard according to which a compilation unit should be compiled, for example
+# -std=gnu89
+# -std=c90
+# -std=c99
+# -std=c11
+# ...
+#
+# g++
+# The standards for C++ start with c++:
+# -std=c++98
+# -std=c++11
+# -std=c++14
+# -std=c++17
+# -std=c++2a
+
+#At@nu Kum@r Bisw@s

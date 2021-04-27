@@ -1,0 +1,14 @@
+# rename 's/_.c/__accepted.c/' *_.c
+# rename -v 's/.c/_.c/' *.c
+# rename -v 's/__//' *.c
+#
+#
+# rename 's/([^-]+)-([^.]+)/$2-$1/g' *. The pattern ^([^-]+)-([^.]+) means: from the start of the name, capture 1 or more chars that are NOT -, then expect a dash, then capture 1 or more chars that are not .. $1 is the first capture, $2 is the second
+#
+
+for f in *__.c; do
+    mv -- "$f" "${f%__.c}__accepted.c"
+done
+
+mv *__accepted.* accepted/
+rm *.out
