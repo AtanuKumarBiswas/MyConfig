@@ -1,0 +1,4 @@
+autocmd filetype c nnoremap <F7> :w <bar> exec '!gcc -std=c11 % -lm && start cmd /k "a.exe & pause & exit()"'<CR><CR>
+autocmd filetype cpp nnoremap <F7> :w <bar> exec '!g++ -std=c++11 -Wall % -lm && start cmd /k "a.exe & pause & exit()"'<CR><CR>
+autocmd filetype python nnoremap <F7> :w <bar> exec '!start cmd /k "conda activate MyPy38R & F:\anaconda3\envs\MyPy38R\python.exe % & pause & exit()"'<CR><CR>
+autocmd filetype java nnoremap <F7> :w <bar> exec '!start cmd /k "javac % & java %:t:r & pause & rm *.class & exit()"'<CR><CR>
