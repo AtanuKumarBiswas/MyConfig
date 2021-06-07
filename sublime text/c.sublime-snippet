@@ -1,0 +1,26 @@
+<snippet>
+<content><![CDATA[
+#include <stdio.h>
+#include <math.h>
+#include <complex.h>
+#include <string.h>
+#include <stdlib.h>
+
+#define pf printf
+#define sf scanf
+#define PI acos(-1)
+#define infinity 2147483647
+#define swap(a,b) {a=a^b;b=a^b;a=a^b;}
+
+int main()
+{
+	${1:/*code*/}
+	
+	return 0;
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>_c</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

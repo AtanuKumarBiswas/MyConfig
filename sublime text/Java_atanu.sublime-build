@@ -1,0 +1,7 @@
+{
+	"cmd": ["javac", "$file_name","&&", "start", "cmd", "/k" , "java $file_base_name & pause & rm *.class & exit"],
+	"selector": "source.java",
+	"working_dir": "${file_path}",
+	// "path": "C:\\Java\\jdk-12.0.2\\bin", // Path of installed gcc compiler directory
+	"shell": true
+}

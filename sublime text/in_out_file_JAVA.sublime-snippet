@@ -1,0 +1,18 @@
+<snippet>
+<content><![CDATA[
+//import java.io.*;
+// 	COMMENT THE BELOW 2 LINES BEFORE SUBMIN THE CODE
+BufferedReader br = new BufferedReader(new FileReader("${1://path to input file//}/input.txt")); 
+PrintWriter pw=new PrintWriter(newBufferedWriter(new FileWriter("${1://path to output file//}/output.txt")));
+// 	COMMENT THE ABOVE 2 LINES BEFORE SUBMIN THE CODE
+
+${2:/*code*/}
+
+pw.flush(); 
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>_ioJAVA</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

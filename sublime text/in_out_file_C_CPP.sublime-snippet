@@ -1,0 +1,14 @@
+<snippet>
+<content><![CDATA[
+// 	COMMENT THE BELOW 2 LINES BEFORE SUBMIN THE CODE 
+freopen("${1://path to input file//}/input.txt", "r", stdin); 
+freopen("${1://path to output file//}/output.txt", "w", stdout); 
+// 	COMMENT THE ABOVE 2 LINES BEFORE SUBMIN THE CODE
+
+${2:/*code*/}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>_ioC/CPP</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

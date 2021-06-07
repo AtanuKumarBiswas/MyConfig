@@ -1,0 +1,25 @@
+<snippet>
+<content><![CDATA[
+#include <bits/stdc++.h>
+#define pf printf
+#define sf scanf
+#define PI acos(-1)
+#define infinity 2147483647
+#define pb push_back
+#define pob pop_back
+
+using namespace std;
+
+int main()
+{
+	${1://code//}
+	
+    return 0;
+}
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>_cpp</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

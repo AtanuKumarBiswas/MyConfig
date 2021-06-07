@@ -1,0 +1,6 @@
+{
+    "file_regex": "(.+):(\\d+): error: ",
+    "shell": true,
+    "selector": "source.java",
+    "shell_cmd": "javac $file && gnome-terminal -- bash -c 'java $file_base_name && echo;echo;echo -e \"\\e[97m \\e[1m \\e[5m                     Press ENTER to continue\";read line;exit'",
+}

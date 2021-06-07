@@ -1,0 +1,7 @@
+{
+	"cmd": ["g++","$file_name", "-o", "output", "&&", "start", "cmd", "/k" , "output.exe & pause & rm *.exe & exit"],
+	"selector": "source.c++,source.c",
+	"working_dir": "${file_path}",
+	// "path": "C:\\mingw-w64\\i686-8.1.0-posix-dwarf-rt_v6-rev0\\mingw32\\bin", // Path of installed gcc compiler directory
+	"shell": true
+}
