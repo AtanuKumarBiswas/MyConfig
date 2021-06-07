@@ -1,0 +1,21 @@
+"workbench.colorCustomizations": {
+        "terminal.foreground":"#c7e641", // norma font color
+        "terminalCursor.background":"#bb9494",
+        "terminalCursor.foreground":"#b68383",
+        "terminal.ansiBlack":"#240d0d",
+        "terminal.ansiBlue":"#056dcf", // directory font color + zsh directory backround
+        "terminal.ansiBrightBlack":"#737171",
+        "terminal.ansiBrightBlue":"#6fcff5",
+        "terminal.ansiBrightCyan":"#85CEBC",
+        "terminal.ansiBrightGreen":"#73f8f8", // file name in list
+        "terminal.ansiBrightMagenta":"#98005D",
+        "terminal.ansiBrightRed":"#EE2E24",
+        "terminal.ansiBrightWhite":"#FFFFFF",
+        "terminal.ansiBrightYellow":"#FFD204",
+        "terminal.ansiCyan":"#85CEBC",
+        "terminal.ansiGreen":"#fdf7b7", // directory background and terminal writing font
+        "terminal.ansiMagenta":"#98005D",
+        "terminal.ansiRed":"#d3b637",
+        "terminal.ansiWhite":"#00c288",
+        "terminal.ansiYellow":"#b89d29" // zsh git status
+    },
