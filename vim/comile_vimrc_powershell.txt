@@ -1,0 +1,40 @@
+" Compile and run powershell"
+
+"c compile and run"
+
+autocmd filetype c nnoremap <F9> :w <bar> 
+\ exec '!start pwsh.exe -Command 
+\ "gcc -std=c11 % -lm";
+\ ".\a.exe";
+\ "read-host "**press ENTER to exit**";
+\ "rm *.exe"'
+\ <CR><CR>
+
+"cpp compile and run"
+
+autocmd filetype cpp nnoremap <F9> :w <bar> 
+\ exec '!start pwsh.exe -Command 
+\ "g++ -std=c++11 -Wall % -lm";
+\ ".\a.exe";
+\ "read-host "**press ENTER to exit**";
+\ "rm *.exe"'
+\ <CR><CR>
+
+"python compile and run"
+
+autocmd filetype python nnoremap <F9> :w <bar> 
+\ exec '!start pwsh.exe -Command 
+\ "conda activate MyPy38R";
+\ "F:\anaconda3\envs\MyPy38R\python.exe %";
+\ "read-host "**press ENTER to exit**"'
+\ <CR><CR>
+
+"java compile and run"
+
+autocmd filetype java nnoremap <F9> :w <bar> 
+\ exec '!start pwsh.exe -Command 
+\ "javac %";
+\ "java %:t:r";
+\ "read-host "**press ENTER to exit**";
+\ "rm *.class"'
+\ <CR><CR>

@@ -1,0 +1,25 @@
+"Compile and run"
+
+map <F9> :call CompileRun()<CR>
+func! CompileRun()
+exec "w"
+if &filetype == 'c'
+	exec "!gcc -std=c11 % -lm  && a.exe && rm a.exe"	
+elseif &filetype == 'cpp'
+	exec "!g++ -std=c++11 -Wall % -lm && a.exe  && rm a.exe"
+elseif &filetype == 'java'
+	exec "!javac % && java -cp %:p:h %:t:r && rm *.class"
+elseif &filetype == 'sh'
+	exec "!time bash %"
+elseif &filetype == 'python'
+	exec "!python3 %"
+elseif &filetype == 'html'
+	exec "!firefox % &"
+elseif &filetype == 'go'
+	exec "!go build %<"
+	exec "!time go run %"
+elseif &filetype == 'mkd'
+	exec "!~/.vim/markdown.pl % > %.html &"
+	exec "!firefox %.html &"
+endif
+endfunc

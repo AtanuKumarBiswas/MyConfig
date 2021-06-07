@@ -1,0 +1,35 @@
+"Using command prompt compile and run"
+
+autocmd filetype c nnoremap <F9> :w <bar>
+\ exec '!start cmd /k 
+\ "gcc -std=c11 % -lm 
+\ & a.exe 
+\ & pause 
+\ & rm *.exe 
+\ & exit()"'
+\ <CR><CR>
+
+autocmd filetype cpp nnoremap <F9> :w <bar>
+\ exec '!start cmd /k 
+\ "g++ -std=c++11 -Wall % -lm
+\ & a.exe 
+\ & rm *.exe 
+\ & pause 
+\ & exit()"'
+\ <CR><CR>
+
+autocmd filetype python nnoremap <F9> :w <bar>
+\ exec '!start cmd /k 
+\ "conda activate MyPy38R &
+\ F:\anaconda3\envs\MyPy38R\python.exe % &
+\ pause & exit()"'
+\ <CR><CR>
+
+autocmd filetype java nnoremap <F9> :w <bar>
+\ exec '!start cmd /k 
+\ "javac % &
+\ java %:t:r &
+\ pause &
+\ rm *.class &
+\ exit()"'
+\ <CR><CR>
