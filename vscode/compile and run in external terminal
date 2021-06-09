@@ -6,7 +6,7 @@
         "c": "cd $dir && echo $PWD > /tmp/vsDir && echo $fileName > /tmp/vsFile && gnome-terminal -- bash -c 'dir=\"$(cat /tmp/vsDir)\" && cd $dir;File=\"$(cat /tmp/vsFile)\" && gcc $File -lm;./a.out;echo Hit Enter to EXIT;read lines;rm *.out' && exit",
         "cpp": "cd $dir && echo $PWD > /tmp/vsDir && echo $fileName > /tmp/vsFile && gnome-terminal -- bash -c 'dir=\"$(cat /tmp/vsDir)\" && cd $dir;File=\"$(cat /tmp/vsFile)\" && g++ $File -lm;./a.out;echo Hit Enter to EXIT;read lines;rm *.out' && exit",
         "java": "cd $dir && echo $PWD > /tmp/vsDir && echo $fileName > /tmp/vsFile && echo $fileNameWithoutExt > /tmp/javaRun && gnome-terminal -- bash -c 'dir=\"$(cat /tmp/vsDir)\" && cd $dir;File=\"$(cat /tmp/vsFile)\" && javac $File;binary=\"$(cat /tmp/javaRun)\";java $binary;echo Hit Enter to EXIT;read lines;rm *.class' && exit",
-        "python": "cd $dir && echo $PWD > /tmp/vsDir && echo $fileName > /tmp/vsFile && gnome-terminal -- bash -c 'dir=\"$(cat /tmp/vsDir)\" && cd $dir;File=\"$(cat /tmp/vsFile)\" && python -u $File;echo Hit Enter to EXIT;read lines' && exit",
+                "python": "cd $dir && echo $PWD > /tmp/vsDir && echo $fileName > /tmp/vsFile && gnome-terminal -- bash -c 'cd;source /home/atanuu/Codes/atPy38/bin/activate;dir=\"$(cat /tmp/vsDir)\" && cd $dir;File=\"$(cat /tmp/vsFile)\" && python -u $File;echo Hit Enter to EXIT;read lines' && exit",
         // "cpp": "cd $dir && echo $fileName && g++ $fileName -lm && echo $dir && ./a.out && rm a.out",
         // "cpp": "cd $dir && g++ $fileName && $dir/a.out && echo Press Enter to EXIT && read lines && rm *.out && exit",
         "objective-c": "cd $dir && gcc -framework Cocoa $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
