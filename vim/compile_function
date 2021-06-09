@@ -1,0 +1,64 @@
+""""""""""""""""""""""""""""""""""compiling""""""""""""""""""""""""""""""""
+
+"autocmd filetype c nnoremap <F9> :w <bar> exec '!gcc -std=c11 % -lm  && ./a.out'<CR>
+" map <F5> :call CompileRun()<CR>
+" func! CompileRun()
+" exec "w"
+" if &filetype == 'c'
+"   exec "!gcc -std=c11 % -lm  && ./a.out"
+"   exec "!rm *.out"
+" elseif &filetype == 'cpp'
+"   exec "!g++ -std=c++11 -Wall % -lm && ./a.out"
+"   exec "!rm *.out"
+" elseif &filetype == 'java'
+"   exec "!javac % && java -cp %:p:h %:t:r"
+"   exec "!rm *.class"
+" elseif &filetype == 'sh'
+"   exec "!time bash %"
+" elseif &filetype == 'python'
+"   "exec "!source ~/Codes/atPy38/bin/activate"
+"   "exec "!~/Codes/atPy38/bin/python3 %"
+"   exec "!python 
+" elseif &filetype == 'html'
+"   exec "!sensible-browser % &"
+" elseif &filetype == 'go'
+"   exec "!go build %<"
+"   exec "!time go run %"
+" elseif &filetype == 'mkd'
+"   exec "!~/.vim/markdown.pl % > %.html &"
+"   exec "!firefox %.html &"
+" endif
+" endfunc
+
+nnoremap <silent> <F5> :call <SID>compile_run_cpp()<CR>
+function! s:compile_run_cpp() abort
+  let src_path = expand('%:p:~')
+  let src_noext = expand('%:p:~:r')
+  " The building flags
+  let _flag = '-Wall -Wextra -std=c++11 -O2'
+  let _link = '-lm'
+  let _exe = 'a.out'
+
+  if executable('clang++')
+    let prog = 'clang++'
+  elseif executable('g++')
+    let prog = 'g++'
+  else
+    echoerr 'No compiler found!'
+  endif
+  call s:create_term_buf('v', 50)
+  execute printf('term %s %s %s && ./%s', prog, _flag, src_path, _exe)
+  " execute printf('term %s %s %s -o %s && %s', prog, _flag, src_path, src_noext, src_noext)
+  startinsert
+endfunction
+
+function s:create_term_buf(_type, size) abort
+  set splitbelow
+  set splitright
+  if a:_type ==# 'v'
+    vnew
+  else
+    new
+  endif
+  execute 'resize ' . a:size
+endfunction
