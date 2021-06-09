@@ -9,14 +9,12 @@ fi
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/atanu/.oh-my-zsh"
-export PATH=/home/atanu/.local/bin:$PATH
+export ZSH="/home/atanuu/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-#ZSH_THEME="robbyrussell"
 ZSH_THEME="powerlevel10k/powerlevel10k"
 POWERLEVEL9K_MODE="nerdfont-complete"
 # Set list of themes to pick from when loading at random
@@ -51,9 +49,11 @@ POWERLEVEL9K_MODE="nerdfont-complete"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-ENABLE_CORRECTION="true"
+ ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
+# Caution: this setting can cause issues with multiline prompts (zsh 5.7.1 and newer seem to work)
+# See https://github.com/ohmyzsh/ohmyzsh/issues/5765
 # COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
@@ -78,7 +78,6 @@ ENABLE_CORRECTION="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
-
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -109,3 +108,30 @@ source $ZSH/oh-my-zsh.sh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+
+
+
+
+
+
+# my config
+
+# Python
+# source /home/atanuu/Codes/atPy38/bin/activate
+alias py38='source ~/Codes/atPy38/bin/activate'
+alias py38j='source ~/Codes/atPy38/bin/activate && jupyter-notebook'
+alias py38l='source ~/Codes/atPy38/bin/activate && jupyter-lab'
+alias py38s='source ~/Codes/atPy38/bin/activate && spyder --new-instance'
+alias python='python3'
+alias atpy='~/Codes/atPy38/bin/python'
+
+
+#alias vim='nvim'
+#alias vi='nvim'
+alias rpi='ssh pi@192.168.1.10'
+
+# texlive
+export MANPATH=/usr/local/texlive/2021/texmf-dist/doc/man
+export INFOPATH=/usr/local/texlive/2021/texmf-dist/doc/info
+export PATH=/usr/local/texlive/2021/bin/x86_64-linux:$PATH
