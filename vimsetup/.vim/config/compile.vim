@@ -3,6 +3,7 @@
 "c compile and run"
 autocmd filetype c nnoremap <F9>
             \ <ESC>:w<CR>
+            \ <ESC>:e<CR>
             \ :let @+ = expand("%:p:h")<CR>
             \ :!xclip -o -sel clip > /tmp/vimDir<CR>
             \ :let @+ = expand("%:t")<CR>
@@ -24,6 +25,7 @@ autocmd filetype c nnoremap <F9>
 
 autocmd filetype cpp nnoremap <F9>
             \ <ESC>:w<CR>
+            \ <ESC>:e<CR>
             \ :let @+ = expand("%:p:h")<CR>
             \ :!xclip -o -sel clip > /tmp/vimDir<CR>
             \ :let @+ = expand("%:t")<CR>
@@ -44,6 +46,7 @@ autocmd filetype cpp nnoremap <F9>
 
 autocmd filetype python nnoremap <F9>
             \ <ESC>:w<CR>
+            \ <ESC>:e<CR>
             \ :let @+ = expand("%:p:h")<CR>
             \ :!xclip -o -sel clip > /tmp/vimDir<CR>
             \ :let @+ = expand("%:t")<CR>
@@ -70,6 +73,7 @@ autocmd filetype python nnoremap <F9>
 " "java compile and run"
 autocmd filetype java nnoremap <F9>
             \ <ESC>:w<CR>
+            \ <ESC>:e<CR>
             \ :let @+ = expand("%:p:h")<CR>
             \ :!xclip -o -sel clip > /tmp/vimDir<CR>
             \ :let @+ = expand("%:t")<CR>
