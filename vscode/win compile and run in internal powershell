@@ -1,0 +1,6 @@
+    "java": "cd $dir && javac $fileName && java $fileNameWithoutExt &&  read-host Enter to EXIT && rm $dir$fileNameWithoutExt.class && exit",
+    "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt && read-host Enter to EXIT && rm $dir$fileNameWithoutExt.exe && exit",
+    "cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt && read-host Enter to EXIT && rm $dir$fileNameWithoutExt.exe && exit",
+    "objective-c": "cd $dir && gcc -framework Cocoa $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "php": "php",
+    "python": "cd $dir && conda activate MyPy38R && python -u $fileName && read-host Press Enter to Exit && exit",
