@@ -1,0 +1,4 @@
+    "c":"invoke-expression 'cmd /c start pwsh -Command {cd $dir; gcc $fileName; .\\a.exe; read-host **Press Enter to EXIT**; rm a.exe}' && exit",
+    "cpp":"invoke-expression 'cmd /c start pwsh -Command {cd $dir; g++ $fileName; .\\a.exe; read-host **Press Enter to EXIT**; rm a.exe}' && exit",
+    "java":"invoke-expression 'cmd /c start pwsh -Command {cd $dir; javac $fileName; java $fileNameWithoutExt; read-host **Press Enter to EXIT**; rm $fileNameWithoutExt.class}' && exit",
+    "python":"invoke-expression 'cmd /c start pwsh -Command {cd $dir; conda activate mypy38r; python -u $fileName;read-host **Press Enter to EXIT**}' && exit",
